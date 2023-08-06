@@ -1,0 +1,94 @@
+:root{
+  --cyan: hsl(179, 62%, 43%);
+  --bright_yellow: hsl(71, 73%, 54%);
+  --light_gray: hsl(204, 43%, 93%);
+  --grayish_blue: hsl(218, 22%, 67%);
+  --light-cyan: hsl(179, 47%, 51%);
+}
+body{
+  background-color: var(--light_gray);
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  height: 100vh;
+  margin: 0;
+}
+.container{
+  margin:0 auto;
+  width: 680px;
+  position: relative;
+  padding: 30px;
+}
+/* FIRST CARD */
+.first-card{
+  background-color: #fff;
+  margin: 0;
+  padding: 20px;
+  width: 640px;
+  border-radius: 10px 10px 0 0;
+}
+.first-card h1{
+  color: var(--cyan);
+}
+.first-card h2{
+  color: var(--bright_yellow);
+}
+.first-card p{
+  color: var(--grayish_blue);
+}
+/* SECOND CARD */
+.second-third{display: table;}
+
+.second-card{
+  display: table-cell;
+  background-color: var(--cyan);
+  padding: 20px;
+  width: 300px;
+  border-radius:0 0 0 10px;
+}
+.second-card h1,h2,p{color: #fff;}
+.second-card span{color: var(--light_gray);font-size: 16px;}
+.second-card button {
+  background-color: var(--bright_yellow);
+  padding: 10px 50px;
+  border: none;
+  border-radius: 5px;
+  width: 220px;
+  height: 50px;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 700;
+  box-shadow: 0 8px 40px -9px #333;
+}
+/* THIRD-CARD */
+.third-card{
+  display: table-cell;
+  background-color: var(--light-cyan);
+  padding: 20px;
+  width: 300px;
+  border-radius:0 0 10px 0;
+}
+/* MEDIA QUERY <600px */
+@media screen and (max-width: 600px) {
+  body{margin: 0;}
+  .container{
+    display:grid;
+    margin:20px auto;
+    padding: 0;
+  }
+  .first-card{
+    width:80%;
+  }
+  .second-card{
+    border-radius: 0;
+    width:100%;
+  }
+  .second-third {
+  display: grid;
+  width:80%;
+  }
+  .third-card{
+    border-radius:0 0 10px 10px;
+    width:100vw;
+  }
+}
